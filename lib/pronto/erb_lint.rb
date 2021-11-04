@@ -22,10 +22,12 @@ module Pronto
     end
 
     def load_config
+      puts "HERE IN LOAD CONFIG #{config_filename}"
       if File.exist?(config_filename)
         config = ::ERBLint::RunnerConfig.new(file_loader.yaml(config_filename))
         @config = ::ERBLint::RunnerConfig.default.merge(config)
       else
+        puts "USING DEFAULT CONFIG"
         warn "#{config_filename} not found: using default config"
         @config = ::ERBLint::RunnerConfig.default
       end
