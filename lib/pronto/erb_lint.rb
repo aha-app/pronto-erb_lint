@@ -5,7 +5,7 @@ require 'erb_lint/file_loader'
 
 module Pronto
   class ERBLint < Runner
-    DEFAULT_CONFIG_FILENAME = '.erb-lint.yml'
+    DEFAULT_CONFIG_FILENAME = '.erb-lint-pronto.yml'
 
     def initialize(_, _ = nil)
       super
