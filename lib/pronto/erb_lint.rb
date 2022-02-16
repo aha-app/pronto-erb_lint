@@ -5,7 +5,7 @@ require 'erb_lint/file_loader'
 
 module Pronto
   class ERBLint < Runner
-    DEFAULT_CONFIG_FILENAME = '.erb-lint.yml'
+    DEFAULT_CONFIG_FILENAME = '.erb-lint-pronto.yml'
 
     def initialize(_, _ = nil)
       super
@@ -35,7 +35,7 @@ module Pronto
     end
 
     def config_filename
-      @config_filename ||= @options[:config] || ::ERBLint::CLI::DEFAULT_CONFIG_FILENAME
+      @config_filename ||= @options[:config] || DEFAULT_CONFIG_FILENAME
     end
 
     def file_loader
